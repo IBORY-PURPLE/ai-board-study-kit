@@ -42,7 +42,7 @@ try {
             Copy-Item $_.FullName $dest; $added++
         }
     }
-    Write-Host "  새 파일 $added개, 기존 파일 유지 $kept개"
+    Write-Host "  새 파일 $($added)개, 기존 파일 유지 $($kept)개"
 
     Write-Host "[3/4] Obsidian 플러그인 내려받기 (공식 GitHub 릴리스)"
     $plugins = @(@{ id = 'pdf-plus'; repo = 'RyotaUshio/obsidian-pdf-plus' }, @{ id = 'realclaudian'; repo = 'YishenTu/claudian' })
