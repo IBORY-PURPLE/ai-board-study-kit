@@ -66,7 +66,7 @@ try {
         if ($LASTEXITCODE -eq 0) { Write-Host "  - Python + PyMuPDF: 준비됨" }
         else {
             Write-Host "  - PyMuPDF(PDF 필기 도구에 필요) 설치 중..."
-            & $py -m pip install --user --quiet pymupdf
+            & $py -m pip install --user --quiet --disable-pip-version-check --no-warn-script-location pymupdf
             if ($LASTEXITCODE -eq 0) { Write-Host "  - PyMuPDF: 설치됨" } else { Write-Host "  - 설치 실패. 직접 실행: $py -m pip install pymupdf" }
         }
     }

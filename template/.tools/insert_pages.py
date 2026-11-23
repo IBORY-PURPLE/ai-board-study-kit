@@ -17,6 +17,9 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 VAULT = Path(__file__).resolve().parent.parent
 BACKUP_DIR = VAULT / "_pdf_원본백업"
 

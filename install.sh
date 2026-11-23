@@ -69,7 +69,7 @@ elif "$PY" -c "import fitz" >/dev/null 2>&1; then
   say "  - Python + PyMuPDF: 준비됨"
 else
   say "  - PyMuPDF(PDF 필기 도구에 필요) 설치 중..."
-  "$PY" -m pip install --user --quiet pymupdf && say "  - PyMuPDF: 설치됨" || say "  - 설치 실패. 직접 실행: $PY -m pip install pymupdf"
+  "$PY" -m pip install --user --quiet --disable-pip-version-check --no-warn-script-location pymupdf && say "  - PyMuPDF: 설치됨" || say "  - 설치 실패. 직접 실행: $PY -m pip install pymupdf"
 fi
 if command -v claude >/dev/null 2>&1; then
   say "  - Claude Code: 준비됨"
